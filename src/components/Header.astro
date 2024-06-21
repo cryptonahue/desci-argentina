@@ -20,8 +20,7 @@ const isActive = (path: string) =>
   <div class="header-top">
   <h1 dir="ltr">
     <a href={getRelativeLocaleUrl(locale, "/")}>
-      <!-- <Image src={AstroImage} alt="Astro" /> -->
-      Community Web
+      <Image src={AstroImage} alt="DeSci Argentina Logo" />
     </a>
   </h1>
   <LocaleSelect />
@@ -33,7 +32,7 @@ const isActive = (path: string) =>
           href={getRelativeLocaleUrl(locale, "/setup")}
           class={isActive("/setup") ? "active" : null}
         >
-          {t({ es: "Setup", en: "Setup", "pt-br": "Setup" })}
+          {t({ es: "Inicio", en: "Setup", "pt-br": "Setup" })}
         </a>
       </li>
 
@@ -44,7 +43,7 @@ const isActive = (path: string) =>
         >
           {
             t({
-              es: "Add Page",
+              es: "Acerca de crecimiento",
               en: "Add Page",
               "pt-BR": "Add Page"
             })
@@ -59,7 +58,7 @@ const isActive = (path: string) =>
         >
           {
             t({
-              es: "Features",
+              es: "Nosotros",
               en: "Features",
               "pt-BR": "Features",
             })
@@ -67,7 +66,7 @@ const isActive = (path: string) =>
         </a>
       </li>
 
-      <li class="en-only">
+     <!--  <li class="en-only">
         <a
           href={getRelativeLocaleUrl(locale, "/monolingual")}
           class={isActive("/monolingual") ? "active" : null}
@@ -84,7 +83,7 @@ const isActive = (path: string) =>
           404
         </a>
       </li>
-
+ -->
       <li>
         <a
           href={getRelativeLocaleUrl(locale, "/blog")}
@@ -94,7 +93,7 @@ const isActive = (path: string) =>
         </a>
       </li>
 
-      <li>
+     <!--  <li>
         <a
           href="https://github.com/psephopaiktes/astro-i18n-starter"
           target="_blank"
@@ -102,7 +101,7 @@ const isActive = (path: string) =>
           GitHub
           <span class="material-icons-sharp">open_in_new</span>
         </a>
-      </li>
+      </li> -->
     </ul>
   </nav>
 </header>
