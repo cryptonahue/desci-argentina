@@ -6,6 +6,9 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://desci.ar',
   integrations: [mdx(), sitemap()],
+  image: {
+    service: squooshImageService(),
+    },
   i18n: {
     defaultLocale: 'es',
     locales: ['en', 'es'],
