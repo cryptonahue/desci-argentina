@@ -4,7 +4,7 @@ import { defineConfig , squooshImageService } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://desci.ar',
+  site: 'desci-argentina.pages.dev',
   integrations: [mdx(), sitemap()],
   image: {
     service: squooshImageService(),
