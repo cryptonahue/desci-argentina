@@ -6,7 +6,6 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 import heroImageEs from "@/assets/es/hero.svg";
 import heroImageEn from "@/assets/en/hero.svg";
-import heroImageptBR from "@/assets/pt-br/hero.svg";
 import { Image } from "astro:assets";
 
 const locale = Astro.currentLocale as Lang;
@@ -20,10 +19,9 @@ export const getStaticPaths = () =>
 <Layout>
   {
     locale === "es" ? (
-      <Image src={heroImageEs} alt="こんにちは" />
-    ) : locale === "pt-br" ? (
-      <Image src={heroImageptBR} alt="你好" />
-    )   : (
+      <Image src={heroImageEs} alt="Hola" />
+    ) 
+      : (
       <Image src={heroImageEn} alt="Hello" />
     )
   }
