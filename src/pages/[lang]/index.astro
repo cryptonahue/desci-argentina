@@ -31,8 +31,6 @@ export const getStaticPaths = () =>
       t({
         es: "Ciencia descentralizada  ",
         en: "i18n Starter is a simple Astro theme for creating multilingual websites. It supports i18n feature from Astro v4.0.",
-        "pt-br":
-          "i18n Starter é um tema simples do Astro para criar sites multilíngues. Suporta o recurso i18n do Astro v4.0.",
       })
     }
   </h1>
@@ -42,8 +40,6 @@ export const getStaticPaths = () =>
         t({
           es: "i18n Starter es un tema sencillo de Astro para crear sitios web multilingües. Soporta la funcionalidad i18n de Astro v4.0.",
           en: "i18n Starter is a simple Astro theme for creating multilingual websites. It supports i18n feature from Astro v4.0.",
-          "pt-br":
-            "i18n Starter é um tema simples do Astro para criar sites multilíngues. Suporta o recurso i18n do Astro v4.0.",
         })
       }
     </p>
@@ -63,9 +59,7 @@ export const getStaticPaths = () =>
         t({
           es: "Básicamente, solo se admite el esquema de URL de subdirectorios. Se gestiona mediante la URL de la siguiente manera para cada idioma. La URL raíz se redirige al idioma predeterminado especificado.",
           en: "Basically, only the subdirectory URL scheme is supported. It is managed by the URL as follows for each language. The root URL is redirected to the specified default language.",
-          "pt-br":
-            "Basicamente, apenas o esquema de URL de subdiretório é suportado. Ele é gerenciado pela URL da seguinte forma para cada idioma. A URL raiz é redirecionada para o idioma padrão especificado.",
-        })
+      })
       }
     </p>
 
@@ -79,8 +73,7 @@ export const getStaticPaths = () =>
         t({
           es: "Funcionalidad",
           en: "Feature",
-          "pt-BR": "Recurso",
-        })
+  })
       }
     </h2>
 
@@ -90,8 +83,7 @@ export const getStaticPaths = () =>
           t({
             es: "Soporte para la funcionalidad i18n oficial de Astro",
             en: "support for Astro's official i18n feature",
-            "pt-BR": "Suporte para o recurso i18n oficial do Astro",
-          })
+         })
         }
       </li>
       <li>
@@ -99,7 +91,6 @@ export const getStaticPaths = () =>
           t({
             es: "Diversos métodos de gestión para páginas multilingües",
             en: "Various management methods for multilingual pages",
-            "pt-BR": "Vários métodos de gerenciamento para páginas multilíngues",
           })
         }
       </li>
@@ -109,8 +100,7 @@ export const getStaticPaths = () =>
           t({
             es: "Amigable para SEO",
             en: "SEO friendly",
-            "pt-BR": "Amigável para SEO",
-          })
+        })
         }
       </li>
     </ul>
@@ -120,7 +110,6 @@ export const getStaticPaths = () =>
         t({
           en: "Getting Started",
           es: "Empezando",
-          "pt-BR": "Começando",
         })
       }
     </h2>
@@ -130,14 +119,13 @@ export const getStaticPaths = () =>
         t({
           es: "¡Vamos a empezar!",
           en: "Let's get started!",
-          "pt-BR": "Vamos começar!",
         })
       }
     </p>
 
     <p>
       <a href={getRelativeLocaleUrl(locale, "setup")}>
-        {t({ es: "Configuración", en: "Setup", "pt-BR": "Configuração" })}
+        {t({ es: "Configuración", en: "Setup",  })}
       </a>
     </p>
 </Layout>

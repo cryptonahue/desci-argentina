@@ -45,7 +45,6 @@ const isActive = (path: string) =>
             t({
               es: "Acerca de crecimiento",
               en: "Add Page",
-              "pt-BR": "Add Page"
             })
           }
         </a>
@@ -60,7 +59,6 @@ const isActive = (path: string) =>
             t({
               es: "Nosotros",
               en: "About us",
-              "pt-BR": "Features",
             })
           }
         </a>
@@ -89,7 +87,7 @@ const isActive = (path: string) =>
           href={getRelativeLocaleUrl(locale, "/blog")}
           class={isActive("/blog") ? "active" : null}
         >
-          {t({ es: "Blog", en: "Blog", "pt-br": "Blog"})}
+          {t({ es: "Blog", en: "Blog"})}
         </a>
       </li>
 
