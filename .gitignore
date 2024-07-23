@@ -1,6 +1,6 @@
 # VS Code Settings
 .vscode/settings.json
-
+.vercel/
 # build output
 dist/
 # generated types
@@ -8,6 +8,7 @@ dist/
 
 # dependencies
 node_modules/
+tina-lock.json
 
 # logs
 npm-debug.log*

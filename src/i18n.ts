@@ -11,7 +11,6 @@ type LocaleConfig = {
   readonly lang?: string;
   readonly dir?: "ltr" | "rtl";
 };
-// TODO: JSでも形一致しない場合はconsole.errorを出してあげる
 
 
 /**
@@ -19,13 +18,11 @@ type LocaleConfig = {
  * @constant @readonly
 */
 export const DEFAULT_LOCALE = DEFAULT_LOCALE_SETTING as Lang;
-// TODO: JSでも形一致しない場合はconsole.errorを出してあげる
 
 
 /**
  * Type for the language code
  * @example
- * // "en" | "ja" | ...
  */
 export type Lang = keyof typeof LOCALES;
 
@@ -33,7 +30,6 @@ export type Lang = keyof typeof LOCALES;
 /**
  * Type for the multilingual object
  * @example
- * // { en: "Hello", ja: "こんにちは", ... }
  */
 export type Multilingual = { [key in Lang]?: string };
 

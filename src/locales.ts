@@ -9,9 +9,8 @@ export const LOCALES_SETTING: LocaleSetting = {
     "label": "English"
   },
  
-  "pt-br": {
+  "pt": {
     "label": "Português",
-    "lang": "pt-BR"
   },
 };
 
