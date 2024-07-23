@@ -7,7 +7,11 @@ export const LOCALES_SETTING: LocaleSetting = {
   
   "en": {
     "label": "English"
-  }
+  },
+ 
+  "pt": {
+    "label": "Português",
+  },
 };
 
 interface LocaleSetting {

@@ -1,26 +1,51 @@
 ---
+// Select UI to switch between locales.
+
 import { getLocalePaths, LOCALES } from "@/i18n";
 ---
 
-<label>
-  <span class="material-icons-sharp">translate</span>
-  <select data-languageSelect>
+<!-- 
+<div class="flex items-center">
+  <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> <span class="material-icons-sharp">translate</span></label>
+  <select data-languageSelect class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
     {
       getLocalePaths(Astro.url).map(({ path, lang }) => (
-        lang && LOCALES[lang] ? (
-          <option
-            label={LOCALES[lang].label}
-            value={path}
-            data-lang={lang}
-            selected={lang === Astro.currentLocale}
-            dir={LOCALES[lang].dir || null}
-          />
-        ) : null
+        
+        <option
+        
+          label={LOCALES[lang].label}
+          value={path}
+          data-lang={lang}
+          selected={lang === Astro.currentLocale}
+          dir={LOCALES[lang].dir || null}
+        />
+      ))
+    }
+  </select>
+</div> 
+ -->
+
+
+
+
+<label >
+  <span class="material-icons-sharp">translate</span>
+  <select data-languageSelect >
+    {
+      getLocalePaths(Astro.url).map(({ path, lang }) => (
+        <option
+        
+          label={LOCALES[lang].label}
+          value={path}
+          data-lang={lang}
+          selected={lang === Astro.currentLocale}
+          dir={LOCALES[lang].dir || null}
+        />
       ))
     }
   </select>
   <span class="material-icons-sharp">expand_more</span>
-</label>
+</label> 
 
 <script>
   const selects = document.querySelectorAll("[data-languageSelect]");
@@ -28,46 +53,56 @@ import { getLocalePaths, LOCALES } from "@/i18n";
   selects.forEach((select) => {
     select.addEventListener("change", (event) => {
       const target = event.target as HTMLSelectElement;
-      if (target.selectedOptions[0].dataset.lang) {
-        // used for 404 page
-        localStorage.selectedLang = target.selectedOptions[0].dataset.lang;
-        location.href = target.value;
-      }
+      // used for 404 page
+      localStorage.selectedLang = target.selectedOptions[0].dataset.lang;
+      location.href = target.value;
     });
   });
+
 </script>
 
 <style>
+
+</style>
+
+
+
+<style>
+
   label {
     position: relative;
-    display: inline-block;
-    width: 170px;
+    display: flex;
+    width: 65px;
     text-align-last: left;
-  }
-  .material-icons-sharp {
-    pointer-events: none;
-    position: absolute;
-    color: var(--color-theme);
-  }
-  .material-icons-sharp:first-child {
-    font-size: 24px;
-    inset: 8px;
-    opacity: 0.4;
-  }
-  .material-icons-sharp:last-child {
-    font-size: 28px;
-    inset: 6px 6px 6px auto;
+    .material-icons-sharp {
+      pointer-events: none;
+      position: absolute;
+      color: currentColor;
+      &:first-child {
+        font-size: 24px;
+        inset: 8px;
+       /*  opacity: 0.4; */
+      }
+      &:last-child {
+        font-size: 28px;
+        inset: 6px 6px 6px auto;
+      }
+    }
   }
   select {
-    width: 100%;
+    width: 40px;
     height: 40px;
-    padding-inline: 38px;
+    padding-inline: 30px;
     cursor: pointer;
     appearance: none;
     border-radius: 6px;
     font-family: "Noto Sans";
     color: var(--color-theme);
-    background-color: var(--color-base);
+    background-color: transparent;
+
+  }
+  select:hover {
+    opacity: 0.5;
     border: 2px solid var(--color-theme);
   }
-</style>
+</style> 

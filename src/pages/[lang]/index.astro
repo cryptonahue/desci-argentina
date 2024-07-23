@@ -1,165 +1,147 @@
 ---
+import Layout from "@/layouts/Base";
 import { LOCALES, useTranslations, type Lang } from "@/i18n";
-import Layout from "@/layouts/Base.astro";
 const t = useTranslations(Astro.currentLocale as Lang);
-import { getRelativeLocaleUrl } from "astro:i18n";
+import About from "@/components/sections/bento-desci"
+import Sponsors from "@/components/sections/sponsors"
+import Agenda from "@/components/sections/agenda-desci"
+import { FAQ } from '@/components/FAQ'
+import Speakers from "@/components/sections/speakers"
 
-import heroImageEs from "@/assets/es/hero.svg";
-import heroImageEn from "@/assets/en/hero.svg";
+// Images
+
+import Hero from "@/assets/images/home/hero.svg";
+
+
 import { Image } from "astro:assets";
+/* import Feature from "../pt/feature.astro"; */
+/* 
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Icon } from "astro-icon/components"; */
 
-const locale = Astro.currentLocale as Lang;
+
+/* import { getRelativeLocaleUrl } from "astro:i18n"; */
+/* const locale = Astro.currentLocale as Lang; */
 
 export const getStaticPaths = () =>
   Object.keys(LOCALES).map((lang) => ({
     params: { lang },
   }));
+
 ---
 
 <Layout>
-  {
+
+  
+<!--   {
     locale === "es" ? (
-      <Image src={heroImageEs} alt="Hola" />
-    ) 
-      : (
+      <Image src={heroImageEs} alt="こんにちは" />
+    ) : locale === "pt" ? (
+      <Image src={heroImageptBR} alt="你好" />
+    )   :  (
       <Image src={heroImageEn} alt="Hello" />
     )
-  }
+  } -->
 
-  <h1>
+
+ <!--  Start Hero -->
+<div class="max-w[1260px]">
+<section class="space-y-6 pt-16 lg:py-28 flex">
+  <div
+    class="container min-h-[80svb] flex flex-wrap-reverse justify-center items-center lg:flex-nowrap  gap-5 "
+  >
+<!--   <div class="pl-8 pt-8">
+  <h1
+      class="font-heading text-4xl font-red pb-[1.5rem] sm:text-5xl md:text-6xl lg:text-7xl !leading-[1.1] text-balance"
+    >
+
     {
       t({
-        es: "Ciencia descentralizada  ",
-        en: "i18n Starter is a simple Astro theme for creating multilingual websites. It supports i18n feature from Astro v4.0.",
+        es: "En el corazón de la evolución cientifica",
+        en: "At the heart of scientific evolution",
+        pt: "No coração da evolução científica",
       })
     }
-  </h1>
 
-    <p>
-      {
-        t({
-          es: "i18n Starter es un tema sencillo de Astro para crear sitios web multilingües. Soporta la funcionalidad i18n de Astro v4.0.",
-          en: "i18n Starter is a simple Astro theme for creating multilingual websites. It supports i18n feature from Astro v4.0.",
-        })
-      }
-    </p>
 
-    <p>
-      <a
-        href={`https://docs.astro.build/${locale}/guides/internationalization/`}
-        target="_blank"
-      >
-        Internationalization (i18n) Routing | Astro Docs
-        <span class="material-icons-sharp">open_in_new</span>
-      </a>
-    </p>
+   
+    </h1>
+    <p
+      class="max-w-[42rem] leading-normal text-lg md:text-2xl font-parraf text-muted-foreground sm:text-xl sm:leading-8 text-balance pb-[1.5rem]"
+    >
 
-    <p>
-      {
-        t({
-          es: "Básicamente, solo se admite el esquema de URL de subdirectorios. Se gestiona mediante la URL de la siguiente manera para cada idioma. La URL raíz se redirige al idioma predeterminado especificado.",
-          en: "Basically, only the subdirectory URL scheme is supported. It is managed by the URL as follows for each language. The root URL is redirected to the specified default language.",
+    {
+      t({
+        es: "Nuestro propósito es impulsar los principios de la descentralización para construir un ecosistema científico colaborativo y accesible para todos en américa latina",
+        en: "Our purpose is to promote the principles of decentralization to build a collaborative and accessible scientific ecosystem for everyone in Latin America.",
+        pt: "Nosso propósito é impulsionar os princípios da descentralização para construir um ecossistema científico colaborativo e acessível para todos na América Latina.",
       })
-      }
+    }
+
+   
     </p>
-
-    <ul>
-      <li>example.com/en/</li>
-      <li>example.com/ja/</li>
-    </ul>
-
-    <h2>
-      {
-        t({
-          es: "Funcionalidad",
-          en: "Feature",
-  })
-      }
-    </h2>
-
-    <ul>
-      <li>
-        {
-          t({
-            es: "Soporte para la funcionalidad i18n oficial de Astro",
-            en: "support for Astro's official i18n feature",
-         })
-        }
-      </li>
-      <li>
-        {
-          t({
-            es: "Diversos métodos de gestión para páginas multilingües",
-            en: "Various management methods for multilingual pages",
-          })
-        }
-      </li>
-      <li>Pure CSS</li>
-      <li>
-        {
-          t({
-            es: "Amigable para SEO",
-            en: "SEO friendly",
-        })
-        }
-      </li>
-    </ul>
-
-    <h2>
-      {
-        t({
-          en: "Getting Started",
-          es: "Empezando",
-        })
-      }
-    </h2>
-
-    <p>
-      {
-        t({
-          es: "¡Vamos a empezar!",
-          en: "Let's get started!",
-        })
-      }
-    </p>
-
-    <p>
-      <a href={getRelativeLocaleUrl(locale, "setup")}>
-        {t({ es: "Configuración", en: "Setup",  })}
+    <div class="flex">
+  
       </a>
-    </p>
+</div> -->
+<!--   </div> -->
+<div>
+<div>
+  <Image src={Hero} alt="DeSci LATAM" />
+</div>
+<div class="flex justify-center font-bold text-xl">
+
+  <p class="text-white"> {
+    t({
+      es: "12 y 13 de Agosto",
+      en: "August 12th and 13th",
+      pt: "12 e 13 de agosto",
+    })
+  } </p></div>
+
+  <div class=" flex max-w-[720px] justify-center gap-10 pt-16 cursor-pointer">
+    <li class="hover:text-[#43A1D5] hover:font-bold"><a >Conferencia</a></li>
+    <li class="hover:text-[#43A1D5] hover:font-bold">Workshops</li>
+      <li class="hover:text-[#43A1D5] hover:font-bold">Batalla de Pitch</li>
+  </div>
+  <div class=" flex max-w-[720px] justify-center gap-5 pt-16">
+    <div><a class="gap-2 rounded-3xl px-4 py-2 bg-[#F1B749] text-black hover:text-white cursor-pointer">Become Sponsor</a></div>
+    <div><a class="gap-2 rounded-3xl px-4 py-2 bg-[#43A1D5] text-black hover:text-white cursor-pointer">Get Ticket</a></div>
+  </div>
+  </div>
+  </div>
+</section>
+
+ <!--  End Hero -->
+
+   <Sponsors />
+   
+   <About />
+ 
+   <Agenda />
+  
+  <!--  <Speakers /> -->
+  <Speakers />
+  <FAQ client:load /> 
+
+    </div>
 </Layout>
 
+<script>
+	import { animate } from 'motion'
+	const showAnimations = localStorage.getItem('animations') === 'true'
 
-<style>
-  /* body {
-    &::before {
-      content: "translate";
-      font-family: "Material Icons Sharp";
-      position: fixed;
-      inset: -2vw -2vw auto auto;
-      font-size: 20vw;
-      line-height: 1;
-      pointer-events: none;
-      color: var(--color-accent);
-      z-index: -1;
-      opacity: 0.2;
-      filter: blur(1px);
-    }
-    @media (width < 800px) {
-      &::before {
-        display: none;
-      }
-    }
-  } */
-  ul {
-    margin-block-start: var(--sp-s);
-    list-style: disc;
-    padding-inline-start: 1em;
-  }
+	if (showAnimations) {
+		animate(
+			'.title',
+			{ y: [80, 0], opacity: [0, 1] },
+			{
+				duration: 2.5,
+				opacity: { duration: 3 },
 
-  h2 {
-    color: var(--color-theme);
-    margin-block-start: var(--sp-l);
-  }
-</style>
+				offset: [0, 0.55, 0.75]
+			}
+		)
+	}
+</script>

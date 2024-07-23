@@ -1,13 +1,13 @@
 ---
 import { LOCALES, localeParams, useTranslations, type Lang } from "@/i18n";
-import Layout from "@/layouts/Base.astro";
+import Layout from "@/layouts/Base";
 const t = useTranslations(Astro.currentLocale as Lang);
 
 
 const title = t({
   es: "Página no encontrada",
   en: "Page Not Found",
-  "pt-BR": "Página não encontrada",
+  "pt": "Página não encontrada",
 }); 
 
 export const getStaticPaths = () => localeParams;
@@ -25,6 +25,7 @@ export const getStaticPaths = () => localeParams;
         t({
           es: "La página que estás buscando no se pudo encontrar. Por favor, volvé al inicio o intentá con otro idioma.",
           en: "The page you are looking for could not be found. Please return to the top or try another language.",
+          "pt": "A página que você está procurando não pôde ser encontrada. Por favor, volte para o topo ou tente outro idioma.",
         })
       }
     </p>
@@ -34,6 +35,7 @@ export const getStaticPaths = () => localeParams;
         t({
           es: "Página Principal",
           en: "Top Page",
+          "pt": "Página Inicial",
         })
       }
     </a>
@@ -44,6 +46,7 @@ export const getStaticPaths = () => localeParams;
           t({
             es: "Ver en otros idiomas",
             en: "View in other languages",
+            "pt": "Ver em outros idiomas",
           })
         }
       </h2>
@@ -58,7 +61,7 @@ export const getStaticPaths = () => localeParams;
                 onclick={`setLang("${lang}")`}
                 dir={LOCALES[lang].dir || null}
               >
-                {label} asda
+                {label} 
               </a>
             </li>
           ))
@@ -83,9 +86,11 @@ export const getStaticPaths = () => localeParams;
     localStorage.removeItem("userAccessPath");
   }
 
-  function setLang(lang) {
+/*   function setLang(lang) {
     localStorage.selectedLang = lang;
-  }
+  } */
+
+
 </script>
 
 <style>
